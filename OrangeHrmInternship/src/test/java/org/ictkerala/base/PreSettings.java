@@ -28,7 +28,7 @@ public class PreSettings {
 		String browser = prop.getProperty("browser");
 		String url = prop.getProperty("url");
 		
-		// Basic if-else structure to choose browser
+		// Basic if-else structure to choose   browser
 	       if (browser.equalsIgnoreCase("chrome")) {
 	           driver = new ChromeDriver();
 	       } else if (browser.equalsIgnoreCase("firefox")) {

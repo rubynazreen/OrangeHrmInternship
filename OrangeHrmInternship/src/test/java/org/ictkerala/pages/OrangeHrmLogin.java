@@ -37,7 +37,7 @@ public class OrangeHrmLogin {
 		if (!currenturl.contains("/dashboard")) {
 	        throw new AssertionError("URL does not contain '/dashboard'");
 	    }
-		// Check that the Dashboard header is visible
+		// Check that the Dashboard  header is visible
 		WebElement dashboardheader=driver.findElement(By.xpath("//h6[text()='Dashboard']"));
 		 if (!dashboardheader.isDisplayed()) {
 		        throw new AssertionError("Dashboard header is not visible");
