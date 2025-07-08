@@ -1,4 +1,4 @@
-package org.ictkerala.base;
+package ict.internship.orangehrmdemo.base;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -18,7 +18,7 @@ public class PreSettings {
 	
 	public void propload() throws IOException  {
 		
-		FileInputStream propobj=new FileInputStream("C:\\Users\\SUMI SUNNY\\git\\OrangeHrmInternship\\OrangeHrmInternship\\src\\test\\resources\\config.properties");
+		FileInputStream propobj=new FileInputStream("C:\\Users\\nehan\\git\\OrangeHrmInternship\\OrangeHrmInternship\\src\\test\\resources\\config.properties");
 		prop=new Properties();
 		prop.load(propobj);
 	}
@@ -41,7 +41,7 @@ public class PreSettings {
 	       }
 	       driver.get(url);
 	       driver.manage().window().maximize();
-	       driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+	       driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(80));
 
 
 	}
