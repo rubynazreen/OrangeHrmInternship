@@ -1,4 +1,4 @@
-package ict.internship.orangehrmdemo.pages;
+package org.ictkerala.pages;
 
 import java.time.Duration;
 

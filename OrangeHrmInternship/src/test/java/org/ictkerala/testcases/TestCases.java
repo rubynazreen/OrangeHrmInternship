@@ -1,5 +1,9 @@
-package ict.internship.orangehrmdemo.testcases;
+package org.ictkerala.testcases;
 
+import org.ictkerala.base.Base;
+import org.ictkerala.pages.AddEmployee;
+import org.ictkerala.pages.Login;
+import org.ictkerala.pages.PIMReport;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -8,12 +12,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import ict.internship.orangehrmdemo.base.PreSettings;
-import ict.internship.orangehrmdemo.pages.AddEmployee;
-import ict.internship.orangehrmdemo.pages.Login;
-import ict.internship.orangehrmdemo.pages.PIMReport;
-
-public class Testcases extends PreSettings {
+public class TestCases extends Base {
 
 	Login lobj;
 	AddEmployee add;

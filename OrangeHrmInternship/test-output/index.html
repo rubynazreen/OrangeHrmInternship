@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Default_suite" class="navigator-link">
+              <span class="suite-name border-passed">Default suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
+                    <span>C:\Users\nehan\AppData\Local\Temp\testng-eclipse-1325159879\testng-customsuite.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Default_suite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Default_suite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Default_suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Default_suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Default_suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Default_suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">28 methods,   28 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Default_suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.ictkerala.testcases.OrangeTestCases" class="method navigator-link" hash-for-method="AddReport">AddReport</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.ictkerala.testcases.OrangeTestCases" class="method navigator-link" hash-for-method="Resetallfilters">Resetallfilters</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.ictkerala.testcases.OrangeTestCases" class="method navigator-link" hash-for-method="Searchreport">Searchreport</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.ictkerala.testcases.OrangeTestCases" class="method navigator-link" hash-for-method="addemployeewithexistingID">addemployeewithexistingID</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.ictkerala.testcases.OrangeTestCases" class="method navigator-link" hash-for-method="addemployeewithonlyfirstname">addemployeewithonlyfirstname</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.ictkerala.testcases.OrangeTestCases" class="method navigator-link" hash-for-method="addnewemployee">addnewemployee</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.ictkerala.testcases.OrangeTestCases" class="method navigator-link" hash-for-method="addreportwithexistingname">addreportwithexistingname</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.ictkerala.testcases.OrangeTestCases" class="method navigator-link" hash-for-method="addreportwithmissingfield">addreportwithmissingfield</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.ictkerala.testcases.OrangeTestCases" class="method navigator-link" hash-for-method="canceladdemployeeprocess">canceladdemployeeprocess</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.ictkerala.testcases.OrangeTestCases" class="method navigator-link" hash-for-method="canceladdreport">canceladdreport</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.ictkerala.testcases.OrangeTestCases" class="method navigator-link" hash-for-method="deletenamefromlist">deletenamefromlist</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.ictkerala.testcases.OrangeTestCases" class="method navigator-link" hash-for-method="deletereport">deletereport</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.ictkerala.testcases.OrangeTestCases" class="method navigator-link" hash-for-method="editreport">editreport</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.ictkerala.testcases.OrangeTestCases" class="method navigator-link" hash-for-method="eneterlogincredential">eneterlogincredential</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.ictkerala.testcases.OrangeTestCases" class="method navigator-link" hash-for-method="loginandnavigationtoPIM">loginandnavigationtoPIM</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.ictkerala.testcases.OrangeTestCases" class="method navigator-link" hash-for-method="loginwithmismatchedpassword">loginwithmismatchedpassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.ictkerala.testcases.OrangeTestCases" class="method navigator-link" hash-for-method="searchbyincludes">searchbyincludes</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.ictkerala.testcases.OrangeTestCases" class="method navigator-link" hash-for-method="searchbyjobtitle">searchbyjobtitle</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.ictkerala.testcases.OrangeTestCases" class="method navigator-link" hash-for-method="searchemployeebyId">searchemployeebyId</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.ictkerala.testcases.OrangeTestCases" class="method navigator-link" hash-for-method="searchemployeebyname">searchemployeebyname</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.ictkerala.testcases.OrangeTestCases" class="method navigator-link" hash-for-method="searchemployeebystatus">searchemployeebystatus</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.ictkerala.testcases.OrangeTestCases" class="method navigator-link" hash-for-method="searchusingspecialcharacter">searchusingspecialcharacter</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.ictkerala.testcases.OrangeTestCases" class="method navigator-link" hash-for-method="searchwithblankfields">searchwithblankfields</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.ictkerala.testcases.OrangeTestCases" class="method navigator-link" hash-for-method="searchwithinvaliddata">searchwithinvaliddata</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.ictkerala.testcases.OrangeTestCases" class="method navigator-link" hash-for-method="verifyReportlist">verifyReportlist</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.ictkerala.testcases.OrangeTestCases" class="method navigator-link" hash-for-method="verifyaddedemployeeinlistafterlogoutlogin">verifyaddedemployeeinlistafterlogoutlogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.ictkerala.testcases.OrangeTestCases" class="method navigator-link" hash-for-method="verifynewemployeepage">verifynewemployeepage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="org.ictkerala.testcases.OrangeTestCases" class="method navigator-link" hash-for-method="viewemployeedetailsfromlist">viewemployeedetailsfromlist</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Default_suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Default_suite" class="panel Default_suite">
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.ictkerala.testcases.OrangeTestCases</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddReport">
+                  </a> <!-- AddReport -->
+                  <span class="method-name">AddReport</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Resetallfilters">
+                  </a> <!-- Resetallfilters -->
+                  <span class="method-name">Resetallfilters</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Searchreport">
+                  </a> <!-- Searchreport -->
+                  <span class="method-name">Searchreport</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addemployeewithexistingID">
+                  </a> <!-- addemployeewithexistingID -->
+                  <span class="method-name">addemployeewithexistingID</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addemployeewithonlyfirstname">
+                  </a> <!-- addemployeewithonlyfirstname -->
+                  <span class="method-name">addemployeewithonlyfirstname</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addnewemployee">
+                  </a> <!-- addnewemployee -->
+                  <span class="method-name">addnewemployee</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addreportwithexistingname">
+                  </a> <!-- addreportwithexistingname -->
+                  <span class="method-name">addreportwithexistingname</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="addreportwithmissingfield">
+                  </a> <!-- addreportwithmissingfield -->
+                  <span class="method-name">addreportwithmissingfield</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="canceladdemployeeprocess">
+                  </a> <!-- canceladdemployeeprocess -->
+                  <span class="method-name">canceladdemployeeprocess</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="canceladdreport">
+                  </a> <!-- canceladdreport -->
+                  <span class="method-name">canceladdreport</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deletenamefromlist">
+                  </a> <!-- deletenamefromlist -->
+                  <span class="method-name">deletenamefromlist</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="deletereport">
+                  </a> <!-- deletereport -->
+                  <span class="method-name">deletereport</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="editreport">
+                  </a> <!-- editreport -->
+                  <span class="method-name">editreport</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="eneterlogincredential">
+                  </a> <!-- eneterlogincredential -->
+                  <span class="method-name">eneterlogincredential</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginandnavigationtoPIM">
+                  </a> <!-- loginandnavigationtoPIM -->
+                  <span class="method-name">loginandnavigationtoPIM</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginwithmismatchedpassword">
+                  </a> <!-- loginwithmismatchedpassword -->
+                  <span class="method-name">loginwithmismatchedpassword</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchbyincludes">
+                  </a> <!-- searchbyincludes -->
+                  <span class="method-name">searchbyincludes</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchbyjobtitle">
+                  </a> <!-- searchbyjobtitle -->
+                  <span class="method-name">searchbyjobtitle</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchemployeebyId">
+                  </a> <!-- searchemployeebyId -->
+                  <span class="method-name">searchemployeebyId</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchemployeebyname">
+                  </a> <!-- searchemployeebyname -->
+                  <span class="method-name">searchemployeebyname</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchemployeebystatus">
+                  </a> <!-- searchemployeebystatus -->
+                  <span class="method-name">searchemployeebystatus</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchusingspecialcharacter">
+                  </a> <!-- searchusingspecialcharacter -->
+                  <span class="method-name">searchusingspecialcharacter</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchwithblankfields">
+                  </a> <!-- searchwithblankfields -->
+                  <span class="method-name">searchwithblankfields</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="searchwithinvaliddata">
+                  </a> <!-- searchwithinvaliddata -->
+                  <span class="method-name">searchwithinvaliddata</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyReportlist">
+                  </a> <!-- verifyReportlist -->
+                  <span class="method-name">verifyReportlist</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyaddedemployeeinlistafterlogoutlogin">
+                  </a> <!-- verifyaddedemployeeinlistafterlogoutlogin -->
+                  <span class="method-name">verifyaddedemployeeinlistafterlogoutlogin</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifynewemployeepage">
+                  </a> <!-- verifynewemployeepage -->
+                  <span class="method-name">verifynewemployeepage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="viewemployeedetailsfromlist">
+                  </a> <!-- viewemployeedetailsfromlist -->
+                  <span class="method-name">viewemployeedetailsfromlist</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
+        </div> <!-- panel Default_suite -->
+        <div panel-name="test-xml-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\nehan\AppData\Local\Temp\testng-eclipse-1325159879\testng-customsuite.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;org.ictkerala.testcases.OrangeTestCases&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Default test --&gt;
+&lt;/suite&gt; &lt;!-- Default suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Default test (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Default_suite');
+function tableData_Default_suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(28);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'verifyReportlist')
+data.setCell(0, 2, 'org.ictkerala.testcases.OrangeTestCases')
+data.setCell(0, 3, 13041);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'canceladdreport')
+data.setCell(1, 2, 'org.ictkerala.testcases.OrangeTestCases')
+data.setCell(1, 3, 10951);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'addreportwithmissingfield')
+data.setCell(2, 2, 'org.ictkerala.testcases.OrangeTestCases')
+data.setCell(2, 3, 10384);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'verifynewemployeepage')
+data.setCell(3, 2, 'org.ictkerala.testcases.OrangeTestCases')
+data.setCell(3, 3, 10154);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'addreportwithexistingname')
+data.setCell(4, 2, 'org.ictkerala.testcases.OrangeTestCases')
+data.setCell(4, 3, 10142);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'AddReport')
+data.setCell(5, 2, 'org.ictkerala.testcases.OrangeTestCases')
+data.setCell(5, 3, 10007);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'editreport')
+data.setCell(6, 2, 'org.ictkerala.testcases.OrangeTestCases')
+data.setCell(6, 3, 9883);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'eneterlogincredential')
+data.setCell(7, 2, 'org.ictkerala.testcases.OrangeTestCases')
+data.setCell(7, 3, 9306);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'viewemployeedetailsfromlist')
+data.setCell(8, 2, 'org.ictkerala.testcases.OrangeTestCases')
+data.setCell(8, 3, 9260);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'Searchreport')
+data.setCell(9, 2, 'org.ictkerala.testcases.OrangeTestCases')
+data.setCell(9, 3, 9000);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'loginwithmismatchedpassword')
+data.setCell(10, 2, 'org.ictkerala.testcases.OrangeTestCases')
+data.setCell(10, 3, 8934);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'addnewemployee')
+data.setCell(11, 2, 'org.ictkerala.testcases.OrangeTestCases')
+data.setCell(11, 3, 8814);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'canceladdemployeeprocess')
+data.setCell(12, 2, 'org.ictkerala.testcases.OrangeTestCases')
+data.setCell(12, 3, 8776);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'deletenamefromlist')
+data.setCell(13, 2, 'org.ictkerala.testcases.OrangeTestCases')
+data.setCell(13, 3, 8626);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'deletereport')
+data.setCell(14, 2, 'org.ictkerala.testcases.OrangeTestCases')
+data.setCell(14, 3, 8287);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'addemployeewithexistingID')
+data.setCell(15, 2, 'org.ictkerala.testcases.OrangeTestCases')
+data.setCell(15, 3, 8247);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'addemployeewithonlyfirstname')
+data.setCell(16, 2, 'org.ictkerala.testcases.OrangeTestCases')
+data.setCell(16, 3, 8129);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'searchwithinvaliddata')
+data.setCell(17, 2, 'org.ictkerala.testcases.OrangeTestCases')
+data.setCell(17, 3, 7411);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'searchusingspecialcharacter')
+data.setCell(18, 2, 'org.ictkerala.testcases.OrangeTestCases')
+data.setCell(18, 3, 7006);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'verifyaddedemployeeinlistafterlogoutlogin')
+data.setCell(19, 2, 'org.ictkerala.testcases.OrangeTestCases')
+data.setCell(19, 3, 6714);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'searchemployeebystatus')
+data.setCell(20, 2, 'org.ictkerala.testcases.OrangeTestCases')
+data.setCell(20, 3, 6505);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'searchbyincludes')
+data.setCell(21, 2, 'org.ictkerala.testcases.OrangeTestCases')
+data.setCell(21, 3, 6452);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'searchbyjobtitle')
+data.setCell(22, 2, 'org.ictkerala.testcases.OrangeTestCases')
+data.setCell(22, 3, 6159);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'Resetallfilters')
+data.setCell(23, 2, 'org.ictkerala.testcases.OrangeTestCases')
+data.setCell(23, 3, 6089);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'searchwithblankfields')
+data.setCell(24, 2, 'org.ictkerala.testcases.OrangeTestCases')
+data.setCell(24, 3, 5915);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'searchemployeebyname')
+data.setCell(25, 2, 'org.ictkerala.testcases.OrangeTestCases')
+data.setCell(25, 3, 4588);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'searchemployeebyId')
+data.setCell(26, 2, 'org.ictkerala.testcases.OrangeTestCases')
+data.setCell(26, 3, 4164);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'loginandnavigationtoPIM')
+data.setCell(27, 2, 'org.ictkerala.testcases.OrangeTestCases')
+data.setCell(27, 3, 3005);
+window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
+              <div id="times-div-Default_suite">
+              </div> <!-- times-div-Default_suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">org.ictkerala.testcases.OrangeTestCases</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">configurations</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="configuration-class before">
+                <span class="method-name">objinit</span>
+                <span class="method-start">6349 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">loginandnavigationtoPIM</span>
+                <span class="method-start">6377 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">searchemployeebyname</span>
+                <span class="method-start">9392 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">searchemployeebyId</span>
+                <span class="method-start">13983 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">searchemployeebystatus</span>
+                <span class="method-start">18152 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">searchbyincludes</span>
+                <span class="method-start">24660 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">searchbyjobtitle</span>
+                <span class="method-start">31112 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">viewemployeedetailsfromlist</span>
+                <span class="method-start">37271 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">searchwithblankfields</span>
+                <span class="method-start">46539 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Resetallfilters</span>
+                <span class="method-start">52459 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">searchwithinvaliddata</span>
+                <span class="method-start">58548 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">searchusingspecialcharacter</span>
+                <span class="method-start">65959 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deletenamefromlist</span>
+                <span class="method-start">72973 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">addnewemployee</span>
+                <span class="method-start">81599 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">addemployeewithonlyfirstname</span>
+                <span class="method-start">90420 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">addemployeewithexistingID</span>
+                <span class="method-start">98549 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">canceladdemployeeprocess</span>
+                <span class="method-start">106805 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">eneterlogincredential</span>
+                <span class="method-start">115586 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">loginwithmismatchedpassword</span>
+                <span class="method-start">124899 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifynewemployeepage</span>
+                <span class="method-start">133833 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyaddedemployeeinlistafterlogoutlogin</span>
+                <span class="method-start">143993 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyReportlist</span>
+                <span class="method-start">150710 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Searchreport</span>
+                <span class="method-start">163753 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">AddReport</span>
+                <span class="method-start">172756 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">addreportwithexistingname</span>
+                <span class="method-start">182763 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">deletereport</span>
+                <span class="method-start">192910 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">editreport</span>
+                <span class="method-start">201203 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">canceladdreport</span>
+                <span class="method-start">211091 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">addreportwithmissingfield</span>
+                <span class="method-start">222052 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>

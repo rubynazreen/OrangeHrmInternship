@@ -1,4 +1,4 @@
-package ict.internship.orangehrmdemo.base;
+package org.ictkerala.base;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -11,7 +11,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.BeforeTest;
 
-public class PreSettings {
+public class Base {
 
 	public WebDriver driver;
 	Properties prop;
