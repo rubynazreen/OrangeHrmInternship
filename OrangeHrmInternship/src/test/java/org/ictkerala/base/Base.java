@@ -18,7 +18,12 @@ public class Base {
 	
 	public void propload() throws IOException  {
 		
-		FileInputStream propobj=new FileInputStream("C:\\Users\\nehan\\git\\OrangeHrmInternship\\OrangeHrmInternship\\src\\test\\resources\\config.properties");
+		 try (InputStream input = getClass().getClassLoader().getResourceAsStream("config.properties")) {
+            if (input == null) {
+                throw new IOException("config.properties not found in classpath");
+            }
+            prop.load(input);
+        }
 		prop=new Properties();
 		prop.load(propobj);
 	}
