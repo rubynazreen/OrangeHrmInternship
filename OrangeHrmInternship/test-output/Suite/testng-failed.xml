@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="org.ictkerala.testcases.OrangeTestCases">
+        <methods>
+          <include name="objinit"/>
+          <include name="configurations"/>
+          <include name="TC012"/>
+          <include name="TC011"/>
+        </methods>
+      </class> <!-- org.ictkerala.testcases.OrangeTestCases -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

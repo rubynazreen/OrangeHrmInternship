@@ -8,10 +8,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-public class OrangeHrmLogin {
+public class Login {
 
 	WebDriver driver;
-	public OrangeHrmLogin(WebDriver driver) {
+	public Login(WebDriver driver) {
 		this.driver=driver;
 	}
 	
@@ -43,21 +43,5 @@ public class OrangeHrmLogin {
 		        throw new AssertionError("Dashboard header is not visible");
 		    }
 	}
-	
-	public void verifyrecruitmentmenu() 
-	{	
-		WebElement recruitmentmenu=driver.findElement(By.xpath("//span[text()='Recruitment']"));
-		Assert.assertTrue(recruitmentmenu.isDisplayed(), "'Recruitment' menu is not displayed");
-		recruitmentmenu.click();
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		
-		// 4. Verify that the URL contains "/recruitment"
-        String currentUrl = driver.getCurrentUrl();
-        Assert.assertTrue(currentUrl.contains("/recruitment"), "URL does not contain '/recruitment'");
-    }
-	public void recruitmentTitle() 
-	{
-		
-	}
-	}
+}
 	
