@@ -10,13 +10,20 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import java.awt.AWTException;
+import org.ictkerala.pages.Pim;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class TestCases extends Base {
 
-	Login lobj;
+	Login login;
 	AddEmployee add;
 	PIMReport report;
+  Pim pim;
 	String actualmessagefornorecords="No records found";
 	String actualmessagefordeletion="Successfully deleted";
 	String actualmessageforsave="Successfully saved";
@@ -27,101 +34,108 @@ public class TestCases extends Base {
 	String actualmessageforedit="Successfully edited";
 	String actualmessageforcancel="Successfully cancel";
 	String actualmessageforlogin="Successfully login";
-	
+
+
+    @BeforeMethod 
+    public void objinit() {
+        
+    }
 	
 	@BeforeClass
-	public void objinit() {
-		lobj=new Login(driver);
+	public void objinit() 
+  {
 		add=new AddEmployee(driver);
 		report=new PIMReport(driver);
+    login = new Login(driver);
+        pim = new Pim(driver);
+        login.loginusername("Admin");
+        login.loginpassword("admin123");
+        login.logbuttn();
+
 				
 	}
 	//first test case
 	@Test(priority=0)
 	public void loginandnavigationtoPIM()
 	{
-		lobj.loginusername("Admin");
-		lobj.loginpassword("admin123");
-		lobj.logbuttn();
-		lobj.verifydashboardpage();
+		login.loginusername("Admin");
+		login.loginpassword("admin123");
+		login.logbuttn();
+		login.verifydashboardpage();
 		Assert.assertEquals(actualmessageforlogin,actualmessageforlogin);
 		System.out.println("Message displayed for search with invalid data:"+ actualmessageforlogin);
 	}
 	@Test(priority=1)
 	public void searchemployeebyname() {
-		lobj.verifypimmenu();
-		//lobj.verifyemployeelist();
-		lobj.employeename("John");
-		lobj.search();
-		lobj.logout();
-		lobj.logout2();
+		login.verifypimmenu();
+		login.employeename("John");
+		login.search();
+		login.logout();
+		login.logout2();
 	}
 	@Test(priority=2)
 	public void searchemployeebyId() {
-		lobj.loginusername("Admin");
-		lobj.loginpassword("admin123");
-		lobj.logbuttn();
-		//lobj.verifydashboardpage();
-		lobj.enterid("0295");
-		lobj.search();
-		lobj.logout();
-		lobj.logout2();
+		login.loginusername("Admin");
+		login.loginpassword("admin123");
+		login.logbuttn();
+		login.enterid("0295");
+		login.search();
+		login.logout();
+		login.logout2();
 	}
 	@Test(priority=3)
 	public void searchemployeebystatus() {
-		lobj.loginusername("Admin");
-		lobj.loginpassword("admin123");
-		lobj.logbuttn();
-		lobj.verifypimmenu();
+		login.loginusername("Admin");
+		login.loginpassword("admin123");
+		login.logbuttn();
+		login.verifypimmenu();
 		//lobj.verifydashboardpage();
-		lobj.employeestatus();
-		lobj.search();
-		lobj.logout();
-		lobj.logout2();
+		login.employeestatus();
+		login.search();
+		login.logout();
+		login.logout2();
 	}
 	@Test(priority=4)
 	public void searchbyincludes() {
-		lobj.loginusername("Admin");
-		lobj.loginpassword("admin123");
-		lobj.logbuttn();
-		lobj.verifypimmenu();
-		//lobj.verifydashboardpage();
-		lobj.employeeinclude();
-		lobj.search();
-		lobj.logout();
-		lobj.logout2();
+		login.loginusername("Admin");
+		login.loginpassword("admin123");
+		login.logbuttn();
+		login.verifypimmenu();
+		login.employeeinclude();
+		login.search();
+		login.logout();
+		login.logout2();
 	}
 	@Test(priority=5)
 	public void searchbyjobtitle() {
-		lobj.loginusername("Admin");
-		lobj.loginpassword("admin123");
-		lobj.logbuttn();
-		lobj.verifypimmenu();
-		//lobj.verifydashboardpage();
-		lobj.employeejobtitle();
-		lobj.search();
-		lobj.logout();
-		lobj.logout2();
+		login.loginusername("Admin");
+		login.loginpassword("admin123");
+		login.logbuttn();
+		login.verifypimmenu();
+		login.employeejobtitle();
+		login.search();
+		login.logout();
+		login.logout2();
 	}
 	@Test(priority=6)
 	public void viewemployeedetailsfromlist() {
-		lobj.loginusername("Admin");
-		lobj.loginpassword("admin123");
-		lobj.logbuttn();
-		lobj.verifypimmenu();
-		lobj.employeedetails();
-		lobj.logout();
-		lobj.logout2();
+		login.loginusername("Admin");
+		login.loginpassword("admin123");
+		login.logbuttn();
+		login.verifypimmenu();
+		login.employeedetails();
+		login.logout();
+		login.logout2();
 		}
 	@Test(priority=7)
 	public void searchwithblankfields() {
-		lobj.loginusername("Admin");
-		lobj.loginpassword("admin123");
-		lobj.logbuttn();
-		lobj.verifypimmenu();
-		lobj.search();
-		lobj.logout();
-		lobj.logout2();
+		login.loginusername("Admin");
+		login.loginpassword("admin123");
+		login.logbuttn();
+		login.verifypimmenu();
+		login.search();
+		login.logout();
+		login.logout2();
 	}
 	/*@Test(priority=8)
 	public void checkpagination() {
@@ -135,94 +149,94 @@ public class TestCases extends Base {
 	}*/
 	@Test(priority=9)
 	public void Resetallfilters() {
-		lobj.loginusername("Admin");
-		lobj.loginpassword("admin123");
-		lobj.logbuttn();
-		lobj.verifypimmenu();
-		lobj.resetbutton();
-		lobj.logout();
-		lobj.logout2();
+		login.loginusername("Admin");
+		login.loginpassword("admin123");
+		login.logbuttn();
+		login.verifypimmenu();
+		login.resetbutton();
+		login.logout();
+		login.logout2();
 	}
 	@Test(priority=10)
 	public void searchwithinvaliddata() {
-		lobj.loginusername("Admin");
-		lobj.loginpassword("admin123");
-		lobj.logbuttn();
-		lobj.verifypimmenu();
+		login.loginusername("Admin");
+		login.loginpassword("admin123");
+		login.logbuttn();
+		login.verifypimmenu();
 		//lobj.verifydashboardpage();
-		lobj.enterid("0000");
-		lobj.employeename("null");
-		lobj.search();
+		login.enterid("0000");
+		login.employeename("null");
+		login.search();
 		Assert.assertEquals(actualmessagefornorecords,actualmessagefornorecords);
 		System.out.println("Message displayed for search with invalid data:"+ actualmessagefornorecords);
-		lobj.logout();
-		lobj.logout2();	
+		login.logout();
+		login.logout2();	
 		
 	}
 	@Test(priority=11)
 	public void searchusingspecialcharacter() {
-		lobj.loginusername("Admin");
-		lobj.loginpassword("admin123");
-		lobj.logbuttn();
-		lobj.verifypimmenu();
+		login.loginusername("Admin");
+		login.loginpassword("admin123");
+		login.logbuttn();
+		login.verifypimmenu();
 		//lobj.verifydashboardpage();
-		lobj.enterid("@#$");
-		lobj.employeename("%&");
-		lobj.search();
+		login.enterid("@#$");
+		login.employeename("%&");
+		login.search();
 		Assert.assertEquals(actualmessagefornorecords,actualmessagefornorecords);
 		System.out.println("Message displayed for search using special character:"+ actualmessagefornorecords);
-		lobj.logout();
-		lobj.logout2();	
+		login.logout();
+		login.logout2();	
 	}
 	@Test(priority=12)
 	public void deletenamefromlist() {
-		lobj.loginusername("Admin");
-		lobj.loginpassword("admin123");
-		lobj.logbuttn();
-		lobj.verifypimmenu();
+		login.loginusername("Admin");
+		login.loginpassword("admin123");
+		login.logbuttn();
+		login.verifypimmenu();
 		//lobj.verifydashboardpage();
-		lobj.deletename();
+		login.deletename();
 		Assert.assertEquals(actualmessagefordeletion,actualmessagefordeletion);
 		System.out.println("Message displayed for delete name from list:"+ actualmessagefordeletion);
-		lobj.logout();
-		lobj.logout2();	
+		login.logout();
+		login.logout2();	
 	
 	}
 	@Test(priority=13)
 	public void addnewemployee()  {
-		lobj.loginusername("Admin");
-		lobj.loginpassword("admin123");
-		lobj.logbuttn();
-		lobj.verifypimmenu();
+		login.loginusername("Admin");
+		login.loginpassword("admin123");
+		login.logbuttn();
+		login.verifypimmenu();
 		add.add();
 		add.enterfirst("Sunitha");
 		add.lastname("Kurup");
 		add.save();
 		Assert.assertEquals(actualmessageforsave,actualmessageforsave);
 		System.out.println("Message displayed for add  new employee:"+ actualmessageforsave);
-		lobj.logout();
-		lobj.logout2();	
+		login.logout();
+		login.logout2();	
 	}
 	@Test(priority=14)
 	public void addemployeewithonlyfirstname(){
-		lobj.loginusername("Admin");
-		lobj.loginpassword("admin123");
-		lobj.logbuttn();
-		lobj.verifypimmenu();
+		login.loginusername("Admin");
+		login.loginpassword("admin123");
+		login.logbuttn();
+		login.verifypimmenu();
 		add.add();
 		add.enterfirst("Sunitha");
 		add.save();
 		Assert.assertEquals(actualmessageformissingfield,actualmessageformissingfield);
 		System.out.println("Message displayed for add new employee without lastname:"+ actualmessageformissingfield);
-		lobj.logout();
-		lobj.logout2();	
+		login.logout();
+		login.logout2();	
 	}
 	@Test(priority=15)
 	public void addemployeewithexistingID() {
-		lobj.loginusername("Admin");
-		lobj.loginpassword("admin123");
-		lobj.logbuttn();
-		lobj.verifypimmenu();
+		login.loginusername("Admin");
+		login.loginpassword("admin123");
+		login.logbuttn();
+		login.verifypimmenu();
 		add.add();
 		add.enterfirst("Mary");
 		add.lastname("Philip");
@@ -230,8 +244,8 @@ public class TestCases extends Base {
 		add.save();
 		Assert.assertEquals(actualmessageforalreadyexistfield,actualmessageforalreadyexistfield);
 		System.out.println("Message displayed for add new employee with existingId:"+ actualmessageforalreadyexistfield);
-		lobj.logout();
-		lobj.logout2();	
+		login.logout();
+		login.logout2();	
 	}
 	/*@Test(priority=16)
 	public void addemeployeewithoutfirstname() {
@@ -250,24 +264,24 @@ public class TestCases extends Base {
 	}*/
 	@Test(priority=17)
 	public void canceladdemployeeprocess() {
-		lobj.loginusername("Admin");
-		lobj.loginpassword("admin123");
-		lobj.logbuttn();
-		lobj.verifypimmenu();
+		login.loginusername("Admin");
+		login.loginpassword("admin123");
+		login.logbuttn();
+		login.verifypimmenu();
 		add.add();
 		add.cancelbutton();
-		lobj.logout();
-		lobj.logout2();	
+		login.logout();
+		login.logout2();	
 		Assert.assertEquals(actualmessageforcancel,actualmessageforcancel);
 		System.out.println("Message displayed for canceling the add employee process:"+ actualmessageforcancel);
 	}
 	@Test(priority=18)
 	public void eneterlogincredential() 
 {
-		lobj.loginusername("Admin");
-		lobj.loginpassword("admin123");
-		lobj.logbuttn();
-		lobj.verifypimmenu();
+		login.loginusername("Admin");
+		login.loginpassword("admin123");
+		login.logbuttn();
+		login.verifypimmenu();
 		add.add();
 		add.enterfirst("Sunitha");
 		add.lastname("Kurup");
@@ -277,17 +291,17 @@ public class TestCases extends Base {
 		add.eneterpassword("Tester@1245");
 		add.eneterconfirmpass("Tester@1245");
 		add.save();
-		lobj.logout();
-		lobj.logout2();	
+		login.logout();
+		login.logout2();	
 		Assert.assertEquals(actualmessageforlogin,actualmessageforlogin);
 		System.out.println("Message displayed for enterlogin credential:"+ actualmessageforlogin);
 	}
 	@Test(priority=19)
 	public void loginwithmismatchedpassword()  {
-		lobj.loginusername("Admin");
-		lobj.loginpassword("admin123");
-		lobj.logbuttn();
-		lobj.verifypimmenu();
+		login.loginusername("Admin");
+		login.loginpassword("admin123");
+		login.logbuttn();
+		login.verifypimmenu();
 		add.add();
 		add.enterfirst("Sunitha");
 		add.lastname("Kurup");
@@ -299,8 +313,8 @@ public class TestCases extends Base {
 		add.save();
 		Assert.assertEquals(actualmessageforwrongcredential,actualmessageforwrongcredential);
 		System.out.println("Message displayed for add new employee with mismatchedpassword and  already existed username:"+ actualmessageforwrongcredential);
-		lobj.logout();
-		lobj.logout2();	
+		login.logout();
+		login.logout2();	
 	}
 	/*@Test(priority=18)
 	public void loginwithoutaddingemployee()  {
@@ -322,10 +336,10 @@ public class TestCases extends Base {
 	}*/
 	@Test(priority=20)
 	public void verifynewemployeepage()  {
-		lobj.loginusername("Admin");
-		lobj.loginpassword("admin123");
-		lobj.logbuttn();
-		lobj.verifypimmenu();
+		login.loginusername("Admin");
+		login.loginpassword("admin123");
+		login.logbuttn();
+		login.verifypimmenu();
 		add.add();
 		add.enterfirst("Joele");
 		add.lastname("mathew");
@@ -337,50 +351,50 @@ public class TestCases extends Base {
 		add.save();
 		Assert.assertEquals(actualTitle, actualTitle);
 		System.out.println("Titledisplayed :"+ actualTitle);
-		lobj.logout();
-		lobj.logout2();	
+		login.logout();
+		login.logout2();	
 	}
 	@Test(priority=21)
 	public void verifyaddedemployeeinlistafterlogoutlogin() {
-		lobj.loginusername("Admin");
-		lobj.loginpassword("admin123");
-		lobj.logbuttn();	
-		lobj.verifypimmenu();
+		login.loginusername("Admin");
+		login.loginpassword("admin123");
+		login.logbuttn();	
+		login.verifypimmenu();
 		//lobj.verifyemployeelist();
-		lobj.employeename("Joele");
-		lobj.search();
-		lobj.logout();
-		lobj.logout2();
+		login.employeename("Joele");
+		login.search();
+		login.logout();
+		login.logout2();
 	}
 	@Test(priority=22)
 	public void verifyReportlist() {
-		lobj.loginusername("Admin");
-		lobj.loginpassword("admin123");
-		lobj.logbuttn();	
-		lobj.verifypimmenu();
+		login.loginusername("Admin");
+		login.loginpassword("admin123");
+		login.logbuttn();	
+		login.verifypimmenu();
 		report.verifyReportpage();
 		report.viewreport();
-		lobj.logout();
-		lobj.logout2();
+		login.logout();
+		login.logout2();
 	}
 	@Test(priority=23)
 	public void Searchreport() {
-		lobj.loginusername("Admin");
-		lobj.loginpassword("admin123");
-		lobj.logbuttn();	
-		lobj.verifypimmenu();
+		login.loginusername("Admin");
+		login.loginpassword("admin123");
+		login.logbuttn();	
+		login.verifypimmenu();
 		report.verifyReportpage();
 		report.searchreport("Employee");
 		report.search();
-		lobj.logout();
-		lobj.logout2();
+		login.logout();
+		login.logout2();
 	}
 	@Test(priority=24)
 	public void AddReport() {
-		lobj.loginusername("Admin");
-		lobj.loginpassword("admin123");
-		lobj.logbuttn();	
-		lobj.verifypimmenu();
+		login.loginusername("Admin");
+		login.loginpassword("admin123");
+		login.logbuttn();	
+		login.verifypimmenu();
 		report.verifyReportpage();
 		report.addreport();
 		report.enterreponame("Electric");
@@ -396,15 +410,15 @@ public class TestCases extends Base {
 		report.save();
 		Assert.assertEquals(actualmessageforsave,actualmessageforsave);
 		System.out.println("Message displayed for add  new report:"+ actualmessageforsave);
-		lobj.logout();
-		lobj.logout2();	
+		login.logout();
+		login.logout2();	
 		}
 	@Test(priority=25)
 	public void addreportwithexistingname() {
-		lobj.loginusername("Admin");
-		lobj.loginpassword("admin123");
-		lobj.logbuttn();	
-		lobj.verifypimmenu();
+		login.loginusername("Admin");
+		login.loginpassword("admin123");
+		login.logbuttn();	
+		login.verifypimmenu();
 		report.verifyReportpage();
 		report.addreport();
 		report.enterreponame("Developer");
@@ -420,60 +434,60 @@ public class TestCases extends Base {
 		report.save();
 		Assert.assertEquals(actualmessageforalreadyexistfield,actualmessageforalreadyexistfield);
 		System.out.println("Message displayed for add report with existing name:"+ actualmessageforalreadyexistfield);
-		lobj.logout();
-		lobj.logout2();	
+		login.logout();
+		login.logout2();	
 	}
 	@Test(priority=26)
 	public void deletereport() {
-		lobj.loginusername("Admin");
-		lobj.loginpassword("admin123");
-		lobj.logbuttn();	
-		lobj.verifypimmenu();
+		login.loginusername("Admin");
+		login.loginpassword("admin123");
+		login.logbuttn();	
+		login.verifypimmenu();
 		report.verifyReportpage();	
 		report.deletereport();
 		Assert.assertEquals(actualmessagefordeletion,actualmessagefordeletion);
 		System.out.println("Message displayed for delete reportf from list:"+ actualmessagefordeletion);
-		lobj.logout();
-		lobj.logout2();	
+		login.logout();
+		login.logout2();	
 	}
 	@Test(priority=27)
 	public void editreport() {
-		lobj.loginusername("Admin");
-		lobj.loginpassword("admin123");
-		lobj.logbuttn();	
-		lobj.verifypimmenu();
+		login.loginusername("Admin");
+		login.loginpassword("admin123");
+		login.logbuttn();	
+		login.verifypimmenu();
 		report.verifyReportpage();
 		report.editreport();
 		report.addmoredisplay();
 		report.save();
 		Assert.assertEquals(actualmessageforedit,actualmessageforedit);
 		System.out.println("Message displayed for edit the report:"+ actualmessageforedit);
-		lobj.logout();
-		lobj.logout2();	
+		login.logout();
+		login.logout2();	
 		}
 @Test(priority=28)
 public void canceladdreport() {
-	lobj.loginusername("Admin");
-	lobj.loginpassword("admin123");
-	lobj.logbuttn();	
-	lobj.verifypimmenu();
+	login.loginusername("Admin");
+	login.loginpassword("admin123");
+	login.logbuttn();	
+	login.verifypimmenu();
 	report.verifyReportpage();
 	report.addreport();
 	report.enterreponame("Developer");
 	report.selectioncriteria();
 	report.option("Employee Name");
 	report.canceladdreport();
-	lobj.logout();
-	lobj.logout2();	
+	login.logout();
+	login.logout2();	
 	Assert.assertEquals(actualmessageforcancel,actualmessageforcancel);
 	System.out.println("Message displayed forcancel the adding report:"+ actualmessageforcancel);
 }
 @Test(priority=29)
 public void addreportwithmissingfield() {
-	lobj.loginusername("Admin");
-	lobj.loginpassword("admin123");
-	lobj.logbuttn();	
-	lobj.verifypimmenu();
+	login.loginusername("Admin");
+	login.loginpassword("admin123");
+	login.logbuttn();	
+	login.verifypimmenu();
 	report.verifyReportpage();
 	report.addreport();
 	report.enterreponame("Software");
@@ -488,11 +502,139 @@ public void addreportwithmissingfield() {
 	report.save();
 	Assert.assertEquals(actualmessageformissingfield,actualmessageformissingfield);
 	System.out.println("Message displayed for add  new report with missing field:"+ actualmessageformissingfield);
-	lobj.logout();
-	lobj.logout2();		
+	login.logout();
+	login.logout2();		
 }
 
+
+   
+
+    @Test (priority=30)
+    public void Login_positive()
+    
+    {
+      
+        login.verifydashboardpage();
+        WebElement dashboardHeader = driver.findElement(By.xpath("//h6[text()='Dashboard']"));
+        Assert.assertTrue(dashboardHeader.isDisplayed(), "Dashboard header is not displayed.");
+        System.out.println("DashBoard present");
+
+    }
+    @Test (priority=31)
+    public void Login_negative1()
+    
+    {
+    	  pim.logout();
+        login.loginusername("Admin");
+        login.loginpassword("admin");
+        login.logbuttn();
+
+            login.loginusername("admin1");
+            login.loginpassword("admin123");
+            login.logbuttn();
+    
+            login.loginusername("  ");
+            login.loginpassword("  ");
+            login.logbuttn();
+            
+      
+            login.loginusername("  ");
+            login.loginpassword("admin123");
+            login.logbuttn();
+            login.loginusername("Admin");
+            login.loginpassword("   ");
+            login.logbuttn();
+      
+            login.loginusername("ADMIN");
+            login.loginpassword("admin123");
+            login.logbuttn();
+       
+            login.loginusername("!@#$%^&*()");
+            login.loginpassword(" !@#123");
+            login.logbuttn();
+        
+    }
+        
+        
+    
+
+    @Test(priority=32)
+    public void Pim_optional_field() throws InterruptedException
+    {
+    	
+        pim.pim();
+        pim.config();
+        pim.optional();
+        WebElement dashboardHeader = driver.findElement(By.xpath("//p[text()='Optional Fields']"));
+        Assert.assertTrue(dashboardHeader.isDisplayed(), "Dashboard header is not displayed.");
+        System.out.println("Optional fields present");
+        pim.optionalfield();
+      
+        
+    }
+    @Test(priority=33)
+    public void Pim_custom_field() throws InterruptedException
+    {
+        pim.pim();
+        pim.config();
+        pim.custom();
+        WebElement dashboardHeader = driver.findElement(By.xpath("//p[text()='Custom Fields']"));
+        Assert.assertTrue(dashboardHeader.isDisplayed(), "Dashboard header is not displayed.");
+        System.out.println("Custom Fields present");
+        pim.customfieldadd();
+        pim.customfieldtext("phone number");
+        pim.dropdown();
+        pim.editrecord();
+        pim.customeditname("Blood groups");
+        pim.deleterecord();
+       
+        
+    }
+     /*   try {
+			pim.dataimport("/OrangeHrmInternship/src/test/resources/Employee.csv");
+		} catch (AWTException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
+
+    @Test(priority=34)
+    public void Pim_reporting_methods() throws InterruptedException
+    {
+    	
+    	pim.pim();
+        pim.reporting();
+        WebElement dashboardHeader = driver.findElement(By.xpath("//p[text()='Reporting Methods']"));
+        Assert.assertTrue(dashboardHeader.isDisplayed(), "Dashboard header is not displayed.");
+        System.out.println("Reporting Methods present");
+        pim.reportingmethod("conduct");
+        pim.reportedit("Test reportings");
+        pim.reportdelete();
+      
+        
+    }
+    
+    @Test(priority=35)
+    public void Pim_termination_reasons() throws InterruptedException
+    {
+    
+    	pim.pim();
+    	pim.config();
+        pim.termination();
+        WebElement dashboardHeader = driver.findElement(By.xpath("//p[text()='Termination Reasons']"));
+        Assert.assertTrue(dashboardHeader.isDisplayed(), "Dashboard header is not displayed.");
+        System.out.println("Termination Reasons present");
+        pim.terminationreason("poor performance");
+        pim.terminationedit("medical");
+        pim.terminationdelete();
+        }
+
+    
+@AfterTest
+public void teardown() 
+{
+	 pim.logout();
+    if (driver != null) {
+        driver.quit();
+    }
 }
-
-
-
+}

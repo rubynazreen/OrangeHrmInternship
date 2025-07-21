@@ -1,9 +1,9 @@
 package org.ictkerala.pages;
 
 import java.time.Duration;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -14,7 +14,6 @@ public class Login {
 	WebDriver driver;
 	public Login(WebDriver driver) {
 		this.driver=driver;
-		
 	}
 	
 	public void loginusername(String uname) {
@@ -44,7 +43,7 @@ public class Login {
 		 if (!dashboardheader.isDisplayed()) {
 		        throw new AssertionError("Dashboard header is not visible");
 		    }
-	}
+  }
 	
 	public void verifypimmenu() 
 	{	
@@ -131,8 +130,4 @@ public void cancelbutton(){
 	cancel.click();
 }
 
-	{
-		
-	}
-	}
-	
+}
